@@ -11,7 +11,7 @@ struct ContentView: View {
     
     
     @State private var temps: [Int] = [60]
-    @State private var location = "Davis"
+    @State private var location = "Los Angeles"
     @State private var HL: [Int] = [92, 57]
     
     
@@ -37,10 +37,13 @@ struct ContentView: View {
                         .font(.system(size: 30, weight: .medium, design: .default))
                 }
                 VStack {
-                    Text("Clear conditions will continue all day.")
-                        .foregroundColor(.white)
-                        .font(.system(size: 20, weight: .medium, design: .default))
-                        .padding(15)
+                        Text("Clear conditions will continue all day.")
+                            .foregroundColor(.white)
+                            .font(.system(size: 18, weight: .medium, design: .default))
+                            .padding(5)
+                            .padding(.top, 15)
+                            .padding(.bottom, 15)
+                            .multilineTextAlignment(.leading)
                     Divider()
                         .padding(-10)
                         .frame(width: UIScreen.main.bounds.width*0.95)
@@ -78,6 +81,10 @@ struct ContentView: View {
                     .foregroundColor(.white)
                     .font(.system(size: 20, weight: .regular, design: .default))
                     .padding(20)
+                    .frame(width: UIScreen.main.bounds.width*0.95)
+                    .background(.ultraThinMaterial)
+                    .background(Color.blue.opacity(0.5))
+                    .cornerRadius(10)
                 
             }
         }
